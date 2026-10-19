@@ -1,0 +1,21 @@
+CR JARVIS APP - INSTRUCCIONES PARA MAC
+
+1. Copia cr_jarvis_app.py a tu carpeta CR-JARVIS (la misma carpeta donde están .venv y es_MX-ald-medium.onnx).
+2. Abre una terminal de VS Code en la carpeta CR-JARVIS.
+3. Ejecuta: .venv/bin/python cr_jarvis_app.py
+4. Aparecerá una ventana. Pulsa 'Hablar con JARVIS' y habla en voz alta.
+
+Opcional: Para crear un acceso directo sin terminal:
+5. Abre Script Editor (Editor de Scripts) en macOS.
+6. Pega:
+   do shell script "cd " & quoted form of (POSIX path of (path to home folder) & "CR-JARVIS") & " && .venv/bin/python cr_jarvis_app.py >/tmp/cr_jarvis_app.log 2>&1 &"
+7. Archivo > Exportar > Formato de archivo: Aplicación. Nombre: CR JARVIS.
+8. Abre la aplicación creada desde Finder o el Dock.
+
+NOTAS
+- Para reconocer la voz con Google necesitas internet.
+- Ollama debe estar funcionando y tener qwen3:1.7b descargado.
+- El archivo es_MX-ald-medium.onnx y Piper deben estar instalados.
+- macOS puede pedir permiso para el micrófono al abrirlo desde un lanzador diferente.
+- Las respuestas de Ollama pueden tardar algunos segundos. Las órdenes de apps no consultan Ollama.
+- El botón evita que JARVIS se grabe a sí mismo mientras habla.
